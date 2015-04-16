@@ -26,6 +26,8 @@ define sysctl (
 
   include '::sysctl::base'
 
+  # TODO check that ${title} does not contain a whitespace
+
   # If we have a prefix, then add the dash to it
   if $prefix {
     $sysctl_d_file = "${prefix}-${title}${suffix}"
